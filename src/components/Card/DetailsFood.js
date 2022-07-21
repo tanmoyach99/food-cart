@@ -2,11 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decrease } from "../../features/cartSlice";
 
-const DetailsFood = ({ food, addToCart }) => {
+const DetailsFood = ({ food, addToCart, decreaseCart }) => {
   const { cart } = useSelector((state) => ({ ...state }));
-  const dispatch = useDispatch;
+
   const clickedFood = cart.cartItems.findIndex((item) => item.id === food.id);
-  const decreaseCart = (fd) => dispatch(decrease(fd));
 
   console.log();
 
