@@ -1,0 +1,19 @@
+.food-card-container{
+    margin-top: 10px;
+
+}
+.card-container{
+    background-color: #fff;
+    margin: 1.5rem;
+    padding: .3rem;
+  
+}
+.card-img{
+    height:22vh;
+    object-fit: cover
+    
+}
+.price-text{
+    margin-top:-5vh;
+    z-index:999
+}
