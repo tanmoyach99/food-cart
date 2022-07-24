@@ -1,6 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { decrease } from "../../features/cartSlice";
+import { useSelector } from "react-redux";
 
 const DetailsFood = ({ food, addToCart, decreaseCart }) => {
   const { cart } = useSelector((state) => ({ ...state }));
@@ -10,7 +9,7 @@ const DetailsFood = ({ food, addToCart, decreaseCart }) => {
   console.log();
 
   return (
-    <div className="col-md-3  card-container" key={food.id}>
+    <div className="col-md-3 col-sm-10 card-container" key={food.id}>
       <div className="img-container">
         <img src={food.img} alt="" className="img-fluid card-img" />
         <div className="price-text">

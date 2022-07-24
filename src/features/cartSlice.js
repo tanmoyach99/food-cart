@@ -16,7 +16,7 @@ const cartSlice = createSlice({
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
       );
-      console.log(itemIndex);
+
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
       } else {
@@ -38,6 +38,15 @@ const cartSlice = createSlice({
       );
       if (state.cartItems[itemIndex].cartQuantity > 1) {
         state.cartItems[itemIndex].cartQuantity -= 1;
+      }
+    },
+    handleQuantityCart(state, action) {
+      const itemIndex = state.cartItems.findIndex(
+        (item) => item.id === action.payload.id
+      );
+
+      if (itemIndex >= 0) {
+        state.cartItems[itemIndex].cartQuantity = action.payload.value;
       }
     },
     clearCart(state, action) {
@@ -66,7 +75,37 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addCart, removeFromCart, decrease, getTotals } =
-  cartSlice.actions;
+export const {
+  addCart,
+  removeFromCart,
+  decrease,
+  getTotals,
+  handleQuantityCart,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+// const handleQuantity = (e) => {
+//   let counts = e.target.value < 1 ? 1 : e.target.value;
+//   if (counts > quantity) {
+//     alert(`only ${quantity} items in stock`);
+//     return;
+//   }
+//   let cart = [];
+//   if (typeof window !== undefined) {
+//     if (localStorage.getItem("cart")) {
+//       cart = JSON.parse(localStorage.getItem("cart"));
+//     }
+//     cart.map((p, i) => {
+//       if (p._id === _id) {
+//         cart[i].count = counts;
+//       }
+//     });
+//     console.log("cart update color", cart);
+//     localStorage.setItem("cart", JSON.stringify(cart));
+//     dispatch({
+//       type: "ADD_TO_CART",
+//       payload: cart,
+//     });
+//   }
+// };

@@ -7,9 +7,8 @@
   height: 50vh;
   width: 23vw;
   background-color: white;
-  border-top: 2px solid green;
+  border-top: 5px solid green;
   overflow-y: scroll;
-  position: fixed;
 }
 
 .single-item{
@@ -17,12 +16,159 @@
 }
 .sub-total{
   top:80vh;
-    width: 23vw;
-    padding:.5rem;
+  width: 23vw;
+  padding:.5rem;
   background-color: white;
-  position: fixed;
+}
+.navbar,.main-navbar{
+  background-color: #0066A7
+}
+ul li{
+   list-style-type:none;
+ 
+}
+
+.nav-link{
+  text-decoration: none;
+  margin:.1rem;
+  margin-top:.2rem;
+  padding:.1rem
+}
+
+/* re4sponsiveness */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .img-banner{
+  width:100%
+}
+  .cart-items{
+  
+  width: 100vw;
+  background-color: white;
+  border-top: 2px solid green;
+  overflow-y: scroll;
 
 }
-.navbar{
-  background-color: #0066A7
+
+
+.sub-total{
+    width: 100vw;
+    padding:.5rem;
+  background-color: white;
+}
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .cart-items{
+  width: 89vw;
+  background-color: white;
+  border-top: 2px solid green;
+  overflow-y: scroll;
+}
+
+
+.sub-total{
+    width: 100vw;
+    padding:.5rem;
+  background-color: white;
+}
+  body{
+    margin: 0;
+    padding: 0;
+  
+    width:100%
+  }
+.img-banner{
+  width:80%;
+  object-fit:cover;
+  padding: 1rem;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body{
+    overflow-x: hidden
+  }
+    .cart-items{
+  width: 31vw;
+  background-color: white;
+  border-top: 2px solid green;
+  overflow-y: scroll;
+  
+}
+.sub-total{
+    width: 100vw;
+    padding:.5rem;
+  background-color: white;
+}
+ .img-banner{
+  width:90%;
+  object-fit:cover;
+  padding: 1rem;
+}
+
+ 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+.cart-items{
+  
+  background-color: white;
+  border-top: 2px solid green;
+  overflow-y: scroll;
+  position: fixed;
+  width:29vw !important;
+}
+
+.sub-total{
+  top:80vh;
+  
+  padding:.5rem;
+  background-color: white;
+  position:fixed
+}
+
+  .img-banner{
+  width:100%
+}
+  .cart-container{
+    margin:5px;
+    padding: 5px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .cart-container{
+    margin:5px;
+    padding: 5px;
+  }
+  .cart-items{
+
+  background-color: white;
+  border-top: 2px solid green;
+  overflow-y: scroll;
+  position: fixed;
+  padding:10px;
+  width: 29vw !important;
+}
+.sub-total{
+  
+  top:80vh;
+  padding:.5rem;
+  background-color: white;
+  position:fixed
+}
+
+  .img-banner{
+  width:100%
+}
 }
